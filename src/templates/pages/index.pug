@@ -1,0 +1,46 @@
+extends ../layouts/main-layout.pug
+
+block title
+  title Geomagnetic
+
+block content
+  section.content
+    .left-side
+      .content__left
+        .header
+          .header__logo
+            picture
+              img(srcset='/images/logo/logo.svg').header__logo-img
+            .header__logo-text GEOMAGNETIC
+          .header__lang
+            .lang
+              ul.lang__list
+                li.lang__item
+                  a.lang__link RUS
+                li.lang__item
+                  a.lang__link ENG
+        .info-block.content__info
+          h1.info-block__title Заголовок
+          .info-block__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+      .content__bg
+      .block
+        .product
+          .product__list
+            each product in content.products
+              .product__item
+                a(href=`${product.icon}`).product__top
+                  svg.product__icon-svg
+                    use(xlink:href=`#${product.icon}`)
+                  .product__title= product.title
+                  svg.product__arrow-svg 
+                    use(xlink:href=`#arrow`) 
+                .product__text= product.text
+        .socials
+          ul.socials__list
+            each item in content.socials
+              li.socials__item
+                a(href="#").socials__link
+                  svg.socials__icon
+                    use(xlink:href=`#${item.name}`)
+    .content__right
+      .bg
