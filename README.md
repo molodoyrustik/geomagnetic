@@ -1,2 +1,2 @@
-# Portfolio
-### Pug Sass JS Gulp Babel HTML CSS Bem-naming Parallax
+# Geomagnetic
+### Pug Sass JS Gulp Babel HTML CSS Bem-naming
